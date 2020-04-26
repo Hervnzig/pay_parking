@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1caa53"
+    android:background="@color/commonGreen"
     android:orientation="vertical"
     android:padding="20dp"
     tools:context=".LoginAgent">
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Welcome, back"
-        android:textColor="@color/colorOnBlackBackground"
+        android:textColor="@color/colorWhite"
         android:textSize="24sp"
         tools:fontFamily="@font/open_sans_bold" />
 
@@ -36,44 +36,41 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Your phone number"
-            android:outlineSpotShadowColor="#fff"
-            android:textColorHint="#fff"
-            app:boxBackgroundColor="#fff"
-            app:boxStrokeColor="#fff">
+            android:textColorHint="@color/colorWhite"
+            app:boxStrokeColor="@color/colorWhite"
+            app:boxBackgroundMode="outline"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:drawableLeft="@drawable/ic_user"
+                android:textColor="@color/colorWhite"
                 android:drawablePadding="10dp"
-                android:inputType="number"
-                android:outlineSpotShadowColor="#fff"
-                android:shadowColor="#fff"
-                android:textColor="#fff"
-                android:textColorHighlight="#fff" />
+                android:inputType="number"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="5dp"
             android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/colorWhite"
+            app:boxStrokeColor="@color/colorWhite"
+            app:boxBackgroundMode="outline"
             android:hint="Password"
-            android:textColorHint="#fff"
-            app:boxBackgroundColor="#fff"
-            app:boxStrokeColor="#fff"
-            app:passwordToggleEnabled="true">
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorHalfWhite"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
             <com.google.android.material.textfield.TextInputEditText
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:drawableLeft="@drawable/ic_icons8_lock"
+                android:layout_height="match_parent"
+                android:drawableStart="@drawable/ic_icons8_lock"
                 android:drawablePadding="10dp"
                 android:inputType="textPassword"
-                android:shadowColor="#fff"
-                android:textColor="#fff"
-                android:textColorHighlight="#fff" />
+                android:textColor="@color/colorWhite"
+                android:drawableLeft="@drawable/ic_icons8_lock" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -86,24 +83,23 @@
             android:gravity="end"
             android:padding="5dp"
             android:text="Forgot Password"
-            android:textColor="#fff"
+            android:textColor="@color/colorWhite"
             android:textSize="14sp" />
         <Button
+            android:id="@+id/agentLoginBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="Log in"
-            android:background="#ffffff"/>
+            android:background="@color/colorWhite"/>
 
         <TextView
-            android:padding="5dp"
+            android:paddingLeft="5dp"
             android:layout_width="wrap_content"
-            android:layout_gravity="left"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Contact us"
-            android:textColor="#fff"
-            android:layout_margin="10dp"/>
+            android:text="Want to be an agent? Contact us"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="10dp"/>
     </LinearLayout>
 
 </LinearLayout>

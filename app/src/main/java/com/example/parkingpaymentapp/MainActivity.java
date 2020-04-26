@@ -16,12 +16,13 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SPLASH_SCREEN = 5000;
+    private static int SPLASH_SCREEN = 3000;
 
     //variables
-    Animation topAnim, bottomAnim;
     ImageView image;
-    TextView logo;
+    TextView logoText;
+    Handler handler;
+    Runnable runnable;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,31 +30,17 @@ public class MainActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_main);
 
-        //Animations
-        topAnim = AnimationUtils.loadAnimation(this, R.anim.top_anim);
-        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_anim);
 
-        //hooks
         image = findViewById(R.id.imageView_logo);
-        logo = findViewById(R.id.textView_logo_text);
+        logoText = findViewById(R.id.textView_logo_text);
 
-        image.setAnimation(topAnim);
-        logo.setAnimation(bottomAnim);
-
-        new Handler().postDelayed(new Runnable() {
+        handler = new Handler();
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(MainActivity.this, LoginClient.class);
-
-                Pair[] pairs = new Pair[2];
-                pairs[0] = new Pair<View, String>(image, "transition_logo_image");
-                pairs[1] = new Pair<View, String>(logo, "transition_logo_text");
-
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-                    ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
-                    startActivity(intent, options.toBundle());
-                    finish();
-                }
+                Intent intent = new Intent(MainActivity.this, SpecifyUser.class);
+                startActivity(intent);
+                finish();
             }
         }, SPLASH_SCREEN);
     }

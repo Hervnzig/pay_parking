@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/today_tickets_menu"
+        android:title="Today"/>
+    <item
+        android:id="@+id/paid_tickets_menu"
+        android:title="Paid"/>
+
+    <item
+        android:id="@+id/pending_tickets_menu"
+        android:title="Pending" />
+
+</menu>

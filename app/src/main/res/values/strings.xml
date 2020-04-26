@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">Parking Payment App</string>
     <string name="password">Password</string>
+    <string name="new_user_sign_up">New user? Sign Up</string>
+    <string name="forgot_password">Forgot Password</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="phone_list">
+        <item>07845363</item>
+        <item>07888656</item>
+    </string-array>
 </resources>
