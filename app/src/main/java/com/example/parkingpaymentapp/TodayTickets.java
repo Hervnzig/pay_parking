@@ -31,13 +31,6 @@ public class TodayTickets extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_today_tickets, container, false);
     }
-//    public void buttonClick(View v){
-//        switch (v.getId()){
-//            case R.id.ticket_action_btn:
-//                Intent intent = new Intent();
-//                intent.setClassName("com.example.parkingpaymentapp", "com.example.parkingpaymentapp.PayTicket");
-//                startActivity(intent);
-//                break;
-//        }
-//    }
+//
+
 }
